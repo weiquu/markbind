@@ -19,6 +19,7 @@ Here is a typical `site.json` file:
   "baseUrl": "/myproduct",
   "faviconPath": "myfavicon.png",
   "titlePrefix": "FooBar Dev Docs",
+  "titleSuffix": "FooBar",
   "style": {
     "bootstrapTheme": "bootswatch-cerulean",
     "codeTheme": "light",
@@ -103,6 +104,10 @@ Note: `baseUrl` does not support [live preview](glossary.md#live-preview) as the
 
 **The prefix for all page titles.** The separator `-` will be inserted by MarkBind.
 
+#### **`titleSuffix`**
+
+**The suffix for all page titles.** The separator `-` will be inserted by MarkBind.
+
 #### **`style`**
 
 _(Optional)_ **The styling options to be applied to the site.** This includes:
@@ -127,7 +132,7 @@ _(Optional)_ **The styling options to be applied to the site.** This includes:
   * `glob` can be used alternatively to define a file pattern in the [_glob syntax_](https://en.wikipedia.org/wiki/Glob_(programming)), or an array of such file patterns.<br>
   {{ icon_examples }} `**/*.md` or `[ '**/*.md', '**/index.md' ]` { .my-2 }
 * **`globExclude`**: An array of file patterns to be excluded from rendering when using `glob`, also defined in the glob syntax.
-* **`title`**: The page `<title>` for the generated web page. Titles specified here take priority over titles specified in the [front matter](addingPages.html#front-matter) of individual pages.
+* **`title`**: The page `<title>` for the generated web page. Titles specified here take priority over titles specified in the [front matter](tweakingThePageStructure.html#front-matter) of individual pages.
 * **`layout`**: The [layout](tweakingThePageStructure.html#page-layouts) to be used by the page. Default: `default`.
 * **`searchable`**: Specifies that the page(s) should be excluded from searching. Default: `yes`.
 * **`externalScripts`**: An array of external scripts to be referenced on the page. Scripts referenced will be run before the layout script.
